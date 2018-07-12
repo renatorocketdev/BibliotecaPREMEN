@@ -37,6 +37,11 @@ namespace ProjetoBiblioteca
         }
         //===============================Livros e Alunos===========================
 
-
+        private void pbLivros_Click(object sender, EventArgs e)
+        {
+            var NewLivros = new Livros();
+            NewLivros.Show();
+            this.Hide();
+        }
     }
 }

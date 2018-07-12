@@ -54,7 +54,6 @@
             this.groupBox1.Size = new System.Drawing.Size(437, 206);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Seleção";
             // 
             // groupBox3
             // 
@@ -97,6 +96,7 @@
             this.pbLivros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLivros.TabIndex = 0;
             this.pbLivros.TabStop = false;
+            this.pbLivros.Click += new System.EventHandler(this.pbLivros_Click);
             // 
             // groupBox4
             // 
@@ -157,7 +157,9 @@
             this.ClientSize = new System.Drawing.Size(473, 279);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "Controle";
+            this.Resizable = false;
             this.Text = "Controle";
             this.Load += new System.EventHandler(this.Controle_Load);
             this.groupBox1.ResumeLayout(false);

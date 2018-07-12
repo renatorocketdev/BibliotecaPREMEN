@@ -34,3 +34,4 @@ R:\Projetos\BibliotecaPREMEN\ProjetoBiblioteca\bin\Debug\System.Data.SQLite.Linq
 R:\Projetos\BibliotecaPREMEN\ProjetoBiblioteca\bin\Debug\EntityFramework.xml
 R:\Projetos\BibliotecaPREMEN\ProjetoBiblioteca\bin\Debug\EntityFramework.SqlServer.xml
 R:\Projetos\BibliotecaPREMEN\ProjetoBiblioteca\bin\Debug\System.Data.SQLite.xml
+R:\Projetos\BibliotecaPREMEN\ProjetoBiblioteca\obj\Debug\ProjetoBiblioteca.Livros.resources

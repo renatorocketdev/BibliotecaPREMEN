@@ -8,7 +8,7 @@ namespace ProjetoBiblioteca.Code.DTO
 {
     class ClienteDTO
     {
-        class Livros
+       /* class Livros
         {
             int id;
             public int Id { get { return id; } set { id = value; } }
@@ -39,5 +39,6 @@ namespace ProjetoBiblioteca.Code.DTO
             int ano;
             public int Ano { get { return ano; } set { ano = value;  } }
         }
+        */
     }
 }

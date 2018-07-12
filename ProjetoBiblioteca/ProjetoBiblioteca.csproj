@@ -80,6 +80,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\DTO\Livros.cs" />
     <Compile Include="Form\Alunos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +112,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\Controle.resx">
       <DependentUpon>Controle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Livros.resx">
+      <DependentUpon>Livros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

@@ -43,5 +43,12 @@ namespace ProjetoBiblioteca
             NewLivros.Show();
             this.Hide();
         }
+
+        private void pbAlunos_Click(object sender, EventArgs e)
+        {
+            var NewAlunos = new Alunos();
+            NewAlunos.Show();
+            this.Hide();
+        }
     }
 }

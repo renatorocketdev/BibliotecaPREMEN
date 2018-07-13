@@ -47,6 +47,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(23, 63);
@@ -75,6 +78,7 @@
             this.pbAlunos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAlunos.TabIndex = 1;
             this.pbAlunos.TabStop = false;
+            this.pbAlunos.Click += new System.EventHandler(this.pbAlunos_Click);
             // 
             // groupBox2
             // 
@@ -100,6 +104,9 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.lblVoltar);
             this.groupBox4.Controls.Add(this.materialDivider1);
             this.groupBox4.Controls.Add(this.lblSair);

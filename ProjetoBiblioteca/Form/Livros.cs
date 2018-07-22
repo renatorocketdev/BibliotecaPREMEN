@@ -21,20 +21,20 @@ namespace ProjetoBiblioteca
 
         private void Livros_Load(object sender, EventArgs e)
         {
-            var bll = new ClienteBLL();
+            var bll = new LivrosBLL();
             bll.CarregarGrid(mgLivros);
         }
 
         private void CarregarDGV()
         {
-            var bll = new ClienteBLL();
+            var bll = new LivrosBLL();
             bll.CarregarGrid(mgLivros);
         }
 
         //==============================Botões====================================
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            var bll = new ClienteBLL();
+            var bll = new LivrosBLL();
             bll.InserirLivro(txtTitulo, txtAutor, txtCategoria, txtLancamento, txtExemplares);
             bll.CarregarGrid(mgLivros);
             bll.LimparCampos(txtTitulo, txtAutor, txtCategoria, txtLancamento, txtExemplares);
@@ -42,7 +42,7 @@ namespace ProjetoBiblioteca
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
-            var bll = new ClienteBLL();
+            var bll = new LivrosBLL();
             bll.CarregarGrid(mgLivros);
             bll.LimparCampos(txtTitulo, txtAutor, txtCategoria, txtLancamento, txtExemplares);
             MessageBox.Show("Atualizado Com Sucesso");
@@ -50,7 +50,7 @@ namespace ProjetoBiblioteca
 
         private void btnDeletar_Click(object sender, EventArgs e)
         {
-            var bll = new ClienteBLL();
+            var bll = new LivrosBLL();
             bll.DeletarLivro(mgLivros);
             bll.CarregarGrid(mgLivros);
             bll.LimparCampos(txtTitulo, txtAutor, txtCategoria, txtLancamento, txtExemplares);
@@ -58,7 +58,7 @@ namespace ProjetoBiblioteca
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            var bll = new ClienteBLL();
+            var bll = new LivrosBLL();
             bll.SalvarLivros(txtTitulo, txtAutor, txtCategoria, txtLancamento, txtExemplares);
             bll.CarregarGrid(mgLivros);
             bll.LimparCampos(txtTitulo, txtAutor, txtCategoria, txtLancamento, txtExemplares);
@@ -66,14 +66,14 @@ namespace ProjetoBiblioteca
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            var bll = new ClienteBLL();
+            var bll = new LivrosBLL();
             bll.LimparCampos(txtTitulo, txtAutor, txtCategoria, txtLancamento, txtExemplares);
         }
 
         //====================================Grid===================================
         private void mgLivros_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            var bll = new ClienteBLL();
+            var bll = new LivrosBLL();
             bll.ExibirGridTxt(txtTitulo, txtAutor, txtCategoria, txtLancamento, txtExemplares, mgLivros);
         }
 

@@ -23,14 +23,14 @@ namespace ProjetoBiblioteca
 
         private void Login_Load(object sender, EventArgs e)
         {
-            var Criar = new ClienteBLL();
+            var Criar = new LoginBLL();
             Criar.CarregarCriarDB();
         }
 
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var Logar = new ClienteBLL();
+            var Logar = new LoginBLL();
             Logar.Logar(txtUsuario, txtSenha);
         }
     }

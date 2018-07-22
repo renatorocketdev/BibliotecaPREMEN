@@ -80,13 +80,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\BLL\AlunosBLL.cs" />
+    <Compile Include="Code\BLL\ConsultaBLL.cs" />
+    <Compile Include="Code\BLL\GestaoBLL.cs" />
+    <Compile Include="Code\BLL\LivrosBLL.cs" />
+    <Compile Include="Code\BLL\LoginBLL.cs" />
+    <Compile Include="Form\Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Consulta.Designer.cs">
+      <DependentUpon>Consulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Alunos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Alunos.Designer.cs">
       <DependentUpon>Alunos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Code\BLL\ClienteBLL.cs" />
     <Compile Include="Code\DAL\ClienteDAL.cs" />
     <Compile Include="Code\DTO\ClienteDTO.cs" />
     <Compile Include="Form\Controle.cs">
@@ -107,13 +117,25 @@
     <Compile Include="Form\Livros.Designer.cs">
       <DependentUpon>Livros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Gestao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Gestao.Designer.cs">
+      <DependentUpon>Gestao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\Alunos.resx">
       <DependentUpon>Alunos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Consulta.resx">
+      <DependentUpon>Consulta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Controle.resx">
       <DependentUpon>Controle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Gestao.resx">
+      <DependentUpon>Gestao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Livros.resx">
       <DependentUpon>Livros.cs</DependentUpon>
@@ -150,6 +172,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\aluno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TESTE.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gestão.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem título.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consulta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets')" />

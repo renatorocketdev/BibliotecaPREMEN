@@ -36,3 +36,5 @@ R:\Projetos\BibliotecaPREMEN\ProjetoBiblioteca\bin\Debug\EntityFramework.SqlServ
 R:\Projetos\BibliotecaPREMEN\ProjetoBiblioteca\bin\Debug\System.Data.SQLite.xml
 R:\Projetos\BibliotecaPREMEN\ProjetoBiblioteca\obj\Debug\ProjetoBiblioteca.Livros.resources
 R:\Projetos\BibliotecaPREMEN\ProjetoBiblioteca\obj\Debug\ProjetoBiblioteca.Alunos.resources
+R:\Projetos\BibliotecaPREMEN\ProjetoBiblioteca\obj\Debug\ProjetoBiblioteca.Gestao.resources
+R:\Projetos\BibliotecaPREMEN\ProjetoBiblioteca\obj\Debug\ProjetoBiblioteca.Consulta.resources

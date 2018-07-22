@@ -57,9 +57,73 @@ namespace ProjetoBiblioteca.Code.DTO
                 get { return exemplares; }
                 set { exemplares = value; }
             }
+            
+        }
+
+        public class Alunos
+        {
+            private int id;
+
+            public int Id
+            {
+                get { return id; }
+                set { id = value; }
+            }
+
+            private string nome;
+
+            public string Nome
+            {
+                get { return nome; }
+                set { nome = value; }
+            }
+
+            private int serie;
+
+            public int Serie
+            {
+                get { return serie; }
+                set { serie = value; }
+            }
+
+            private string sala;
+
+            public string Sala
+            {
+                get { return sala; }
+                set { sala = value; }
+            }
+
+            private string observacoes;
+
+            public string Observacoes
+            {
+                get { return observacoes; }
+                set { observacoes = value; }
+            }
+        }
+
+        public class AlunoGestao
+        {
+            private string nome;
+
+            public string Nome
+            {
+                get { return nome; }
+                set { nome = value; }
+            }
+        }
+
+        public class LivroGestao
+        {
+            private string titulo;
+
+            public string Titulo
+            {
+                get { return titulo; }
+                set { titulo = value; }
+            }
         }
     }
-
-
 }
 

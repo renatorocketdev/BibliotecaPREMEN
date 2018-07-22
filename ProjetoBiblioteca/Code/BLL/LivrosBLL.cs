@@ -3,41 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 using ProjetoBiblioteca.Code.DAL;
 using System.Data.SQLite;
 using System.Data;
+using System.Windows.Forms;
+
 
 namespace ProjetoBiblioteca.Code.BLL
 {
-    class ClienteBLL
+    class LivrosBLL
     {
-        //==================================Form Login===================================
-        internal void Logar(MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario, MaterialSkin.Controls.MaterialSingleLineTextField txtSenha)
-        {
-            if (txtUsuario.Text == "admin" && txtSenha.Text == "admin")
-            {
-                Controle NewControle = new Controle();
-                NewControle.Show();
-            }
-            else if (txtUsuario.Text != "admin" && txtSenha.Text != "admin")
-            {
-                MessageBox.Show("Senha ou Usuario Incorreto");
-            }
-        }
-
-        internal void CarregarCriarDB()
-        {
-            var Criar = new ClienteDAL();
-            Criar.CarregarCriarDb();
-        }
         //=================================Form Livro===================================
         //======================================Botões==================================
+        //==================================Inserir===================================
         internal void InserirLivro(MaterialSkin.Controls.MaterialSingleLineTextField txtTitulo,
                                    MaterialSkin.Controls.MaterialSingleLineTextField txtAutor,
-                                   MaterialSkin.Controls.MaterialSingleLineTextField txtCategoria, 
-                                   MaterialSkin.Controls.MaterialSingleLineTextField txtLancamento, 
+                                   MaterialSkin.Controls.MaterialSingleLineTextField txtCategoria,
+                                   MaterialSkin.Controls.MaterialSingleLineTextField txtLancamento,
                                    MaterialSkin.Controls.MaterialSingleLineTextField txtExemplares)
         {
             string NewConexao = ClienteDAL.BancoDs;
@@ -58,10 +41,10 @@ namespace ProjetoBiblioteca.Code.BLL
                 MessageBox.Show("Livro Adicionado com Sucesso");
             }
             catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao Salvar Livro: " + ex.Message);
-            }
+            {   MessageBox.Show("Erro ao Salvar Livro: " + ex.Message);   }
         }
+
+        //======================Deletar=====================
         internal void DeletarLivro(MetroFramework.Controls.MetroGrid mgLivros)
         {
             string NewConexao = ClienteDAL.BancoDs;
@@ -73,22 +56,20 @@ namespace ProjetoBiblioteca.Code.BLL
             cmd.Parameters.AddWithValue("ID", Convert.ToInt32(mgLivros.CurrentRow.Cells[0].Value));
 
             try
-            {
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Livro Deletado Com Sucesso");
+            {   cmd.ExecuteNonQuery(); 
+                MessageBox.Show("Livro Deletado Com Sucesso"); 
             }
             catch (Exception ex)
-            {
-                MessageBox.Show("Erro Ao Deletar Livro: " + ex.Message);
-            }
+            {   MessageBox.Show("Erro Ao Deletar Livro: " + ex.Message);    }
         }
 
+        //===========================================Salvar=========================
         private static int IDRegistro;
 
         internal void SalvarLivros(MaterialSkin.Controls.MaterialSingleLineTextField txtTitulo,
                                    MaterialSkin.Controls.MaterialSingleLineTextField txtAutor,
-                                   MaterialSkin.Controls.MaterialSingleLineTextField txtCategoria, 
-                                   MaterialSkin.Controls.MaterialSingleLineTextField txtLancamento, 
+                                   MaterialSkin.Controls.MaterialSingleLineTextField txtCategoria,
+                                   MaterialSkin.Controls.MaterialSingleLineTextField txtLancamento,
                                    MaterialSkin.Controls.MaterialSingleLineTextField txtExemplares)
         {
             string Conexao = ClienteDAL.BancoDs;
@@ -112,12 +93,10 @@ namespace ProjetoBiblioteca.Code.BLL
                     MessageBox.Show("Livro Atualizado Com Sucesso");
                 }
                 catch (Exception ex)
-                {
-                    MessageBox.Show("Erro Ao Atualizar Livro " + ex.Message);
-                }
+                {   MessageBox.Show("Erro Ao Atualizar Livro " + ex.Message);   }
             }
         }
-
+        //========================================Limpar Campos=========================
         internal void LimparCampos(MaterialSkin.Controls.MaterialSingleLineTextField txtTitulo,
                                    MaterialSkin.Controls.MaterialSingleLineTextField txtAutor,
                                    MaterialSkin.Controls.MaterialSingleLineTextField txtCategoria,
@@ -137,6 +116,7 @@ namespace ProjetoBiblioteca.Code.BLL
             var dal = new ClienteDAL();
             dal.CarregarDados(mgLivros);
         }
+        //=============================Grid e TextBox
         internal void ExibirGridTxt(MaterialSkin.Controls.MaterialSingleLineTextField txtTitulo,
                                     MaterialSkin.Controls.MaterialSingleLineTextField txtAutor,
                                     MaterialSkin.Controls.MaterialSingleLineTextField txtCategoria,
@@ -152,6 +132,5 @@ namespace ProjetoBiblioteca.Code.BLL
             txtLancamento.Text = Convert.ToString(mgLivros.CurrentRow.Cells[4].Value);
             txtExemplares.Text = Convert.ToString(mgLivros.CurrentRow.Cells[5].Value);
         }
-        //================================Form Alunos======================================
     }
 }

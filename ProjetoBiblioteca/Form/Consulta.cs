@@ -41,5 +41,17 @@ namespace ProjetoBiblioteca
 
             mgAlunos.DataSource = Pesquisa.PesquisarDadosAlunos(txtPesquisa2);
         }
+
+        private void lblVoltar_Click(object sender, EventArgs e)
+        {
+            var NewControle = new Controle();
+            NewControle.Show();
+            this.Hide();
+        }
+
+        private void lblSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

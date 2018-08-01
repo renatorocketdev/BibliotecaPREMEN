@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoBiblioteca.Properties;
 
 using MetroFramework;
 using MaterialSkin;
@@ -25,13 +26,49 @@ namespace ProjetoBiblioteca
         {
             var Criar = new LoginBLL();
             Criar.CarregarCriarDB();
+
+            if (Settings.Default.Password == "admin" && Settings.Default.Username == "admin")
+            {
+                txtSenha.Text = Settings.Default.Password;
+                txtUsuario.Text = Settings.Default.Username;
+                CBLembrar.Checked = true;
+            }
+            if (CBLembrar.Checked == false)
+            {
+                Settings.Default.Password = "";
+                Settings.Default.Username = "";
+                Settings.Default.Save();
+            }
         }
 
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var Logar = new LoginBLL();
-            Logar.Logar(txtUsuario, txtSenha);
+            if (txtUsuario.Text == "admin" && txtSenha.Text == "admin")
+            {
+                    if (CBLembrar.Checked == true)
+                    {
+                        Settings.Default.Password = txtSenha.Text;
+                        Settings.Default.Username = txtUsuario.Text;
+                        Settings.Default.Save();
+ 
+                        ProjetoBiblioteca.Login.ActiveForm.Hide();
+                        (new Controle()).Show();
+                    }
+                    if (CBLembrar.Checked == false)
+                    {
+                        Settings.Default.Password = "";
+                        Settings.Default.Username = "";
+                        Settings.Default.Save();
+                    }
+
+                    ProjetoBiblioteca.Login.ActiveForm.Hide();
+                    (new Controle()).Show();
+            }
+            else if (txtUsuario.Text != "admin" && txtSenha.Text != "admin")
+            {
+                MessageBox.Show("Senha ou Usuario Incorreto");
+            }
         }
     }
 }

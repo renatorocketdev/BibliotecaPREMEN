@@ -105,6 +105,14 @@ namespace ProjetoBiblioteca.Code.DTO
 
         public class AlunoGestao
         {
+            private int id;
+
+            public int Id
+            {
+                get { return id; }
+                set { id = value; }
+            }
+
             private string nome;
 
             public string Nome
@@ -116,12 +124,39 @@ namespace ProjetoBiblioteca.Code.DTO
 
         public class LivroGestao
         {
+            private int id;
+
+            public int Id
+            {
+                get { return id; }
+                set { id = value; }
+            }
+
             private string titulo;
 
             public string Titulo
             {
                 get { return titulo; }
                 set { titulo = value; }
+            }
+        }
+
+        public class Gestao
+        {
+            private int retirada;
+
+            public int Retirada
+            {
+                get { return retirada; }
+                set { retirada = value; }
+            }
+
+            private string status;
+
+            public string Status
+            {
+                get { return status; }
+                set { status = value; }
             }
         }
     }

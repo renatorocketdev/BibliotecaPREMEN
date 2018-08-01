@@ -35,7 +35,7 @@ namespace ProjetoBiblioteca.Code.DAL
                 sql.AppendLine("[NOME] VARCHAR(50), [SERIE] INTEGER, [SALA] VARCHAR(1), [OBSERVACOES] VARCHAR(100)); ");
                 //======================Tabela Gestao===================
                 sql.AppendLine("CREATE TABLE IF NOT EXISTS GESTAO ([ID] INTEGER PRIMARY KEY AUTOINCREMENT, ");
-                sql.AppendLine("[LIVRO] VARCHAR(50), [ALUNO] VARCHAR(50), [RETIRADA] INTEGER );");
+                sql.AppendLine("[LIVRO] VARCHAR(50), [ALUNO] VARCHAR(50), [RETIRADA] INTEGER, [STATUS] );");
 
                 SQLiteCommand cmd = new SQLiteCommand(sql.ToString(), Conexao);
                 try
@@ -103,7 +103,7 @@ namespace ProjetoBiblioteca.Code.DAL
             if (Conexao.State == ConnectionState.Closed)
                 Conexao.Open();
 
-            SQLiteCommand cmd = new SQLiteCommand("SELECT (NOME) FROM ALUNOS", Conexao);
+            SQLiteCommand cmd = new SQLiteCommand("SELECT ID, NOME FROM ALUNOS", Conexao);
             SQLiteDataReader Dr = cmd.ExecuteReader();
             List<ClienteDTO.AlunoGestao> Lista = new List<ClienteDTO.AlunoGestao>();
 
@@ -111,6 +111,7 @@ namespace ProjetoBiblioteca.Code.DAL
             {
                 Lista.Add(new ClienteDTO.AlunoGestao
                 {
+                    Id = Convert.ToInt32(Dr["ID"]),
                     Nome = Dr["NOME"].ToString()
                 });
             }
@@ -123,7 +124,7 @@ namespace ProjetoBiblioteca.Code.DAL
             if (Conexao.State == ConnectionState.Closed)
                 Conexao.Open();
 
-            SQLiteCommand cmd = new SQLiteCommand("SELECT (TITULO) FROM LIVROS", Conexao);
+            SQLiteCommand cmd = new SQLiteCommand("SELECT ID, TITULO FROM LIVROS", Conexao);
             SQLiteDataReader Dr = cmd.ExecuteReader();
             List<ClienteDTO.LivroGestao> Lista = new List<ClienteDTO.LivroGestao>();
 
@@ -131,6 +132,7 @@ namespace ProjetoBiblioteca.Code.DAL
             {
                 Lista.Add(new ClienteDTO.LivroGestao
                 {
+                    Id = Convert.ToInt32(Dr["ID"]),
                     Titulo = Dr["TITULO"].ToString()
                 });
             }

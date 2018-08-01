@@ -31,7 +31,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtSenha = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialCheckBox1 = new MaterialSkin.Controls.MaterialCheckBox();
+            this.CBLembrar = new MaterialSkin.Controls.MaterialCheckBox();
             this.btnLogin = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -76,21 +76,21 @@
             this.txtSenha.TabIndex = 2;
             this.txtSenha.UseSystemPasswordChar = false;
             // 
-            // materialCheckBox1
+            // CBLembrar
             // 
-            this.materialCheckBox1.AutoSize = true;
-            this.materialCheckBox1.Depth = 0;
-            this.materialCheckBox1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialCheckBox1.Location = new System.Drawing.Point(157, 167);
-            this.materialCheckBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox1.Name = "materialCheckBox1";
-            this.materialCheckBox1.Ripple = true;
-            this.materialCheckBox1.Size = new System.Drawing.Size(105, 30);
-            this.materialCheckBox1.TabIndex = 3;
-            this.materialCheckBox1.Text = "Lembrar-me";
-            this.materialCheckBox1.UseVisualStyleBackColor = true;
+            this.CBLembrar.AutoSize = true;
+            this.CBLembrar.Depth = 0;
+            this.CBLembrar.Font = new System.Drawing.Font("Roboto", 10F);
+            this.CBLembrar.Location = new System.Drawing.Point(157, 167);
+            this.CBLembrar.Margin = new System.Windows.Forms.Padding(0);
+            this.CBLembrar.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.CBLembrar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.CBLembrar.Name = "CBLembrar";
+            this.CBLembrar.Ripple = true;
+            this.CBLembrar.Size = new System.Drawing.Size(105, 30);
+            this.CBLembrar.TabIndex = 3;
+            this.CBLembrar.Text = "Lembrar-me";
+            this.CBLembrar.UseVisualStyleBackColor = true;
             // 
             // btnLogin
             // 
@@ -111,7 +111,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 206);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.materialCheckBox1);
+            this.Controls.Add(this.CBLembrar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.pictureBox1);
@@ -131,7 +131,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtSenha;
-        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox1;
+        private MaterialSkin.Controls.MaterialCheckBox CBLembrar;
         private MaterialSkin.Controls.MaterialRaisedButton btnLogin;
 
     }

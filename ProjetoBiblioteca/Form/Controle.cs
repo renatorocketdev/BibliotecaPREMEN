@@ -50,5 +50,19 @@ namespace ProjetoBiblioteca
             NewAlunos.Show();
             this.Hide();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            var NewControle = new Gestao();
+            NewControle.Show();
+            this.Hide();
+        }
+
+        private void pbConsulta_Click(object sender, EventArgs e)
+        {
+            var NewConsulta = new Consulta();
+            NewConsulta.Show();
+            this.Hide();
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace ProjetoBiblioteca.Code.BLL
 {
     class ConsultaBLL
     {
+        //===========Carrega os Dados nos Dois Grids Alunos e Livro===================
         internal void CarregarGridLivros(MetroFramework.Controls.MetroGrid mgLivros)
         {
             var Carregar = new ClienteDAL();
@@ -24,6 +25,7 @@ namespace ProjetoBiblioteca.Code.BLL
             Carregar.CarregarDadosAlunos(mgAlunos);
         }
 
+        //========================Função para Pesquisa de Livros
         public DataTable PesquisarDadosLivros(MetroFramework.Controls.MetroTextBox txtPesquisa)
         {
             string NewConexao = ClienteDAL.BancoDs;
@@ -53,6 +55,7 @@ namespace ProjetoBiblioteca.Code.BLL
             }
         }
 
+        //=====================Função para Pesquisa de Alunos
         public DataTable PesquisarDadosAlunos(MetroFramework.Controls.MetroTextBox txtPesquisa2)
         {
             string NewConexao = ClienteDAL.BancoDs;

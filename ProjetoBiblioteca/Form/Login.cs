@@ -26,7 +26,7 @@ namespace ProjetoBiblioteca
         {
             var Criar = new LoginBLL();
             Criar.CarregarCriarDB();
-
+            //========================Função Lembrar-me========================
             if (Settings.Default.Password == "admin" && Settings.Default.Username == "admin")
             {
                 txtSenha.Text = Settings.Default.Password;
@@ -40,7 +40,7 @@ namespace ProjetoBiblioteca
                 Settings.Default.Save();
             }
         }
-
+        //======================Função Login=======================
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
             if (txtUsuario.Text == "admin" && txtSenha.Text == "admin")

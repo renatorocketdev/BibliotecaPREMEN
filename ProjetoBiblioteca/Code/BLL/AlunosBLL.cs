@@ -71,6 +71,7 @@ namespace ProjetoBiblioteca.Code.BLL
 
         private static int IDRegistro;
 
+        //==============================Exibir o Grid================================
         internal void ExibirGridTxt(MaterialSkin.Controls.MaterialSingleLineTextField txtNome,
                                    MaterialSkin.Controls.MaterialSingleLineTextField txtSerie,
                                    MaterialSkin.Controls.MaterialSingleLineTextField txtSala,
@@ -83,6 +84,7 @@ namespace ProjetoBiblioteca.Code.BLL
             txtSala.Text = mgAlunos.CurrentRow.Cells[2].Value.ToString();
         }
 
+        //================================Salvar======================================
         internal void Salvar(MaterialSkin.Controls.MaterialSingleLineTextField txtNome,
                              MaterialSkin.Controls.MaterialSingleLineTextField txtSerie,
                              MaterialSkin.Controls.MaterialSingleLineTextField txtSala)
@@ -95,6 +97,7 @@ namespace ProjetoBiblioteca.Code.BLL
             if (IDRegistro > 0)
             {
                 SQLiteCommand cmd = new SQLiteCommand("UPDATE ALUNOS SET NOME = @NOME, SERIE = @SERIE, SALA = @SALA WHERE ID = @ID", conn);
+                cmd.Parameters.AddWithValue("ID", IDRegistro);
                 cmd.Parameters.AddWithValue("NOME", txtNome.Text);
                 cmd.Parameters.AddWithValue("SERIE", txtSerie.Text);
                 cmd.Parameters.AddWithValue("SALA", txtSala.Text);
@@ -105,10 +108,11 @@ namespace ProjetoBiblioteca.Code.BLL
                     MessageBox.Show("Salvo com Sucesso"); 
                 }
                 catch (Exception ex )
-                { MessageBox.Show("Falha ao Salvar Livro" + ex.Message); }
+                { MessageBox.Show("Falha ao Salvar Aluno" + ex.Message); }
             }
         }
 
+        //============================Limpar Campos===================================
         internal void LimparCampos(MaterialSkin.Controls.MaterialSingleLineTextField txtNome,
                                    MaterialSkin.Controls.MaterialSingleLineTextField txtSerie,
                                    MaterialSkin.Controls.MaterialSingleLineTextField txtSala)

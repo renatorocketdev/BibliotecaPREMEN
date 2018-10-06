@@ -13,7 +13,7 @@ namespace ProjetoBiblioteca.Code.BLL
 {
     class GestaoBLL
     {
-        //=======================================Gestão==============================
+        //=============================Carrega Dados dos Grids==============================
         internal void CarregarDadosAlunosGestao(MetroFramework.Controls.MetroGrid mgAlunos)
         {
             var dal = new ClienteDAL();
@@ -26,6 +26,7 @@ namespace ProjetoBiblioteca.Code.BLL
             dal.CarregarDadosLivrosGestao(mgLivros);
         }
 
+        //=====================Função de Pesquisa=============
         public DataTable PesquisarDadosAlunos(MaterialSkin.Controls.MaterialSingleLineTextField txtBuscaAluno)
         {
             string NewConexao = ClienteDAL.BancoDs;
@@ -55,6 +56,8 @@ namespace ProjetoBiblioteca.Code.BLL
             }
         }
 
+
+        //=======================Função de Pesquisa
         public DataTable PesquisarDadosLivros(MaterialSkin.Controls.MaterialSingleLineTextField txtBuscaLivro)
         {
             string NewConexao = ClienteDAL.BancoDs;
@@ -84,6 +87,7 @@ namespace ProjetoBiblioteca.Code.BLL
             }
         }
 
+        //=====================Função de Adicionar um Aluno==========================
         internal void InserirAluno(MaterialSkin.Controls.MaterialSingleLineTextField txtLivro,
                            MaterialSkin.Controls.MaterialSingleLineTextField txtAluno,
                            MaterialSkin.Controls.MaterialSingleLineTextField txtRetirada

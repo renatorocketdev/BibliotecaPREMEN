@@ -18,7 +18,7 @@ namespace ProjetoBiblioteca
         {
             InitializeComponent();
         }
-
+        //================Carrega o Grid=================
         private void Gestao_Load(object sender, EventArgs e)
         {
             var bll = new GestaoBLL();
@@ -27,6 +27,7 @@ namespace ProjetoBiblioteca
             bll1.CarregarDadosLivrosGestao(mgLivros);
         }
 
+        //=================Carrega o Conteúdo da Celula no TextBox==============================
         public void mgLivros_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             txtLivro.Text = mgLivros.CurrentRow.Cells[1].Value.ToString();
@@ -36,7 +37,7 @@ namespace ProjetoBiblioteca
         {
             txtAluno.Text = mgAlunos.CurrentRow.Cells[1].Value.ToString();
         }
-
+        //=====================Evento para Pesquisa por ID========================
         private void txtBuscaAluno_TextChanged(object sender, EventArgs e)
         {
             var ConsultaAluno = new GestaoBLL();
@@ -53,6 +54,7 @@ namespace ProjetoBiblioteca
             mgLivros.DataSource = ConsultaLivro.PesquisarDadosLivros(txtBuscaLivro);
         }
 
+        //=====================Controle Principal=====================
         private void lblVoltar_Click(object sender, EventArgs e)
         {
             var NewControle = new Controle();

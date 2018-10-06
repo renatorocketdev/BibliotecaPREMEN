@@ -41,29 +41,28 @@ namespace ProjetoBiblioteca
             }
         }
 
-
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
             if (txtUsuario.Text == "admin" && txtSenha.Text == "admin")
             {
-                    if (CBLembrar.Checked == true)
-                    {
-                        Settings.Default.Password = txtSenha.Text;
-                        Settings.Default.Username = txtUsuario.Text;
-                        Settings.Default.Save();
- 
-                        ProjetoBiblioteca.Login.ActiveForm.Hide();
-                        (new Controle()).Show();
-                    }
-                    if (CBLembrar.Checked == false)
-                    {
-                        Settings.Default.Password = "";
-                        Settings.Default.Username = "";
-                        Settings.Default.Save();
-                    }
+                if (CBLembrar.Checked == true)
+                {
+                    Settings.Default.Password = txtSenha.Text;
+                    Settings.Default.Username = txtUsuario.Text;
+                    Settings.Default.Save();
 
                     ProjetoBiblioteca.Login.ActiveForm.Hide();
                     (new Controle()).Show();
+                }
+                if (CBLembrar.Checked == false)
+                {
+                    Settings.Default.Password = "";
+                    Settings.Default.Username = "";
+                    Settings.Default.Save();
+                }
+
+                ProjetoBiblioteca.Login.ActiveForm.Hide();
+                (new Controle()).Show();
             }
             else if (txtUsuario.Text != "admin" && txtSenha.Text != "admin")
             {

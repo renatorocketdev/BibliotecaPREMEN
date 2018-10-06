@@ -32,7 +32,7 @@
             this.txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtSenha = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.CBLembrar = new MaterialSkin.Controls.MaterialCheckBox();
-            this.btnLogin = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnLogin = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,16 +94,13 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Depth = 0;
-            this.btnLogin.Location = new System.Drawing.Point(280, 171);
-            this.btnLogin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnLogin.Location = new System.Drawing.Point(279, 167);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Primary = true;
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Size = new System.Drawing.Size(76, 30);
+            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Text = "LOGIN";
+            this.btnLogin.UseSelectable = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
             // Login
             // 
@@ -132,7 +129,7 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtSenha;
         private MaterialSkin.Controls.MaterialCheckBox CBLembrar;
-        private MaterialSkin.Controls.MaterialRaisedButton btnLogin;
+        private MetroFramework.Controls.MetroButton btnLogin;
 
     }
 }

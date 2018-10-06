@@ -399,6 +399,10 @@
             this.mgAlunos.AllowUserToAddRows = false;
             this.mgAlunos.AllowUserToDeleteRows = false;
             this.mgAlunos.AllowUserToResizeRows = false;
+            this.mgAlunos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mgAlunos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.mgAlunos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.mgAlunos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mgAlunos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -450,42 +454,42 @@
             // ID
             // 
             this.ID.DataPropertyName = "Id";
+            this.ID.FillWeight = 61.6727F;
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
-            this.ID.Width = 25;
             // 
             // NOME
             // 
             this.NOME.DataPropertyName = "Nome";
+            this.NOME.FillWeight = 240.2455F;
             this.NOME.HeaderText = "NOME";
             this.NOME.Name = "NOME";
             this.NOME.ReadOnly = true;
-            this.NOME.Width = 250;
             // 
             // SERIE
             // 
             this.SERIE.DataPropertyName = "Serie";
+            this.SERIE.FillWeight = 38.07106F;
             this.SERIE.HeaderText = "SÉRIE";
             this.SERIE.Name = "SERIE";
             this.SERIE.ReadOnly = true;
-            this.SERIE.Width = 50;
             // 
             // SALA
             // 
             this.SALA.DataPropertyName = "Sala";
+            this.SALA.FillWeight = 37.33865F;
             this.SALA.HeaderText = "SALA";
             this.SALA.Name = "SALA";
             this.SALA.ReadOnly = true;
-            this.SALA.Width = 50;
             // 
             // OBSERVAÇÕES
             // 
             this.OBSERVAÇÕES.DataPropertyName = "Observacoes";
+            this.OBSERVAÇÕES.FillWeight = 122.672F;
             this.OBSERVAÇÕES.HeaderText = "OBSERVAÇÕES";
             this.OBSERVAÇÕES.Name = "OBSERVAÇÕES";
             this.OBSERVAÇÕES.ReadOnly = true;
-            this.OBSERVAÇÕES.Width = 150;
             // 
             // Alunos
             // 

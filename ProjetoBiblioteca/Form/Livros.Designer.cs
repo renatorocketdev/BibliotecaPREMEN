@@ -32,16 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btnLimpar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnAtualizar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
-            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
-            this.btnDeletar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnSalvar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.btnNovo = new MaterialSkin.Controls.MaterialFlatButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtExemplares = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblExemplares = new MaterialSkin.Controls.MaterialLabel();
@@ -53,6 +43,16 @@
             this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
             this.txtAutor = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtTitulo = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnLimpar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnAtualizar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
+            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            this.btnDeletar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnSalvar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btnNovo = new MaterialSkin.Controls.MaterialFlatButton();
             this.mgLivros = new MetroFramework.Controls.MetroGrid();
             this.lblVoltar = new MaterialSkin.Controls.MaterialLabel();
             this.lblSair = new MaterialSkin.Controls.MaterialLabel();
@@ -65,10 +65,10 @@
             this.LANÇAMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EXEMPLARES = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mgLivros)).BeginInit();
             this.groupBox6.SuspendLayout();
             this.SuspendLayout();
@@ -83,147 +83,6 @@
             this.groupBox1.Size = new System.Drawing.Size(644, 115);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox5.Controls.Add(this.btnLimpar);
-            this.groupBox5.Location = new System.Drawing.Point(501, 178);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(165, 53);
-            this.groupBox5.TabIndex = 5;
-            this.groupBox5.TabStop = false;
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.AutoSize = true;
-            this.btnLimpar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnLimpar.Depth = 0;
-            this.btnLimpar.Location = new System.Drawing.Point(19, 10);
-            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnLimpar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Padding = new System.Windows.Forms.Padding(100);
-            this.btnLimpar.Primary = false;
-            this.btnLimpar.Size = new System.Drawing.Size(122, 36);
-            this.btnLimpar.TabIndex = 2;
-            this.btnLimpar.Text = "LIMPAR CAMPOS";
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox4.Controls.Add(this.btnAtualizar);
-            this.groupBox4.Location = new System.Drawing.Point(24, 178);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(170, 53);
-            this.groupBox4.TabIndex = 4;
-            this.groupBox4.TabStop = false;
-            // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.AutoSize = true;
-            this.btnAtualizar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAtualizar.Depth = 0;
-            this.btnAtualizar.Location = new System.Drawing.Point(47, 10);
-            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnAtualizar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Primary = false;
-            this.btnAtualizar.Size = new System.Drawing.Size(85, 36);
-            this.btnAtualizar.TabIndex = 1;
-            this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.UseVisualStyleBackColor = true;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox3.Controls.Add(this.materialDivider2);
-            this.groupBox3.Controls.Add(this.materialDivider1);
-            this.groupBox3.Controls.Add(this.btnDeletar);
-            this.groupBox3.Controls.Add(this.btnSalvar);
-            this.groupBox3.Controls.Add(this.btnNovo);
-            this.groupBox3.Location = new System.Drawing.Point(214, 178);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(262, 53);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            // 
-            // materialDivider2
-            // 
-            this.materialDivider2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider2.Depth = 0;
-            this.materialDivider2.Location = new System.Drawing.Point(175, 14);
-            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider2.Name = "materialDivider2";
-            this.materialDivider2.Size = new System.Drawing.Size(2, 28);
-            this.materialDivider2.TabIndex = 3;
-            this.materialDivider2.Text = "materialDivider2";
-            // 
-            // materialDivider1
-            // 
-            this.materialDivider1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider1.Depth = 0;
-            this.materialDivider1.Location = new System.Drawing.Point(68, 14);
-            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider1.Name = "materialDivider1";
-            this.materialDivider1.Size = new System.Drawing.Size(2, 28);
-            this.materialDivider1.TabIndex = 2;
-            this.materialDivider1.Text = "materialDivider1";
-            // 
-            // btnDeletar
-            // 
-            this.btnDeletar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnDeletar.AutoSize = true;
-            this.btnDeletar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDeletar.Depth = 0;
-            this.btnDeletar.Location = new System.Drawing.Point(87, 10);
-            this.btnDeletar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnDeletar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Primary = false;
-            this.btnDeletar.Size = new System.Drawing.Size(70, 36);
-            this.btnDeletar.TabIndex = 2;
-            this.btnDeletar.Text = "Deletar";
-            this.btnDeletar.UseVisualStyleBackColor = true;
-            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalvar.AutoSize = true;
-            this.btnSalvar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSalvar.Depth = 0;
-            this.btnSalvar.Location = new System.Drawing.Point(191, 10);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnSalvar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Primary = false;
-            this.btnSalvar.Size = new System.Drawing.Size(64, 36);
-            this.btnSalvar.TabIndex = 1;
-            this.btnSalvar.Text = "Update";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.AutoSize = true;
-            this.btnNovo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnNovo.Depth = 0;
-            this.btnNovo.Location = new System.Drawing.Point(7, 10);
-            this.btnNovo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnNovo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Primary = false;
-            this.btnNovo.Size = new System.Drawing.Size(50, 36);
-            this.btnNovo.TabIndex = 0;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // groupBox2
             // 
@@ -396,6 +255,147 @@
             this.txtTitulo.TabIndex = 0;
             this.txtTitulo.UseSystemPasswordChar = false;
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox5.Controls.Add(this.btnLimpar);
+            this.groupBox5.Location = new System.Drawing.Point(501, 178);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(165, 53);
+            this.groupBox5.TabIndex = 5;
+            this.groupBox5.TabStop = false;
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.AutoSize = true;
+            this.btnLimpar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLimpar.Depth = 0;
+            this.btnLimpar.Location = new System.Drawing.Point(19, 10);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnLimpar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Padding = new System.Windows.Forms.Padding(100);
+            this.btnLimpar.Primary = false;
+            this.btnLimpar.Size = new System.Drawing.Size(122, 36);
+            this.btnLimpar.TabIndex = 2;
+            this.btnLimpar.Text = "LIMPAR CAMPOS";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox4.Controls.Add(this.btnAtualizar);
+            this.groupBox4.Location = new System.Drawing.Point(24, 178);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(170, 53);
+            this.groupBox4.TabIndex = 4;
+            this.groupBox4.TabStop = false;
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.AutoSize = true;
+            this.btnAtualizar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAtualizar.Depth = 0;
+            this.btnAtualizar.Location = new System.Drawing.Point(47, 10);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAtualizar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Primary = false;
+            this.btnAtualizar.Size = new System.Drawing.Size(85, 36);
+            this.btnAtualizar.TabIndex = 1;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox3.Controls.Add(this.materialDivider2);
+            this.groupBox3.Controls.Add(this.materialDivider1);
+            this.groupBox3.Controls.Add(this.btnDeletar);
+            this.groupBox3.Controls.Add(this.btnSalvar);
+            this.groupBox3.Controls.Add(this.btnNovo);
+            this.groupBox3.Location = new System.Drawing.Point(214, 178);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(262, 53);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            // 
+            // materialDivider2
+            // 
+            this.materialDivider2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider2.Depth = 0;
+            this.materialDivider2.Location = new System.Drawing.Point(175, 14);
+            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider2.Name = "materialDivider2";
+            this.materialDivider2.Size = new System.Drawing.Size(2, 28);
+            this.materialDivider2.TabIndex = 3;
+            this.materialDivider2.Text = "materialDivider2";
+            // 
+            // materialDivider1
+            // 
+            this.materialDivider1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider1.Depth = 0;
+            this.materialDivider1.Location = new System.Drawing.Point(68, 14);
+            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider1.Name = "materialDivider1";
+            this.materialDivider1.Size = new System.Drawing.Size(2, 28);
+            this.materialDivider1.TabIndex = 2;
+            this.materialDivider1.Text = "materialDivider1";
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnDeletar.AutoSize = true;
+            this.btnDeletar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDeletar.Depth = 0;
+            this.btnDeletar.Location = new System.Drawing.Point(87, 10);
+            this.btnDeletar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDeletar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Primary = false;
+            this.btnDeletar.Size = new System.Drawing.Size(70, 36);
+            this.btnDeletar.TabIndex = 2;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalvar.AutoSize = true;
+            this.btnSalvar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSalvar.Depth = 0;
+            this.btnSalvar.Location = new System.Drawing.Point(191, 10);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSalvar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Primary = false;
+            this.btnSalvar.Size = new System.Drawing.Size(64, 36);
+            this.btnSalvar.TabIndex = 1;
+            this.btnSalvar.Text = "Update";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.AutoSize = true;
+            this.btnNovo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNovo.Depth = 0;
+            this.btnNovo.Location = new System.Drawing.Point(7, 10);
+            this.btnNovo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnNovo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Primary = false;
+            this.btnNovo.Size = new System.Drawing.Size(50, 36);
+            this.btnNovo.TabIndex = 0;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
             // mgLivros
             // 
             this.mgLivros.AllowUserToAddRows = false;
@@ -404,6 +404,7 @@
             this.mgLivros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.mgLivros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.mgLivros.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.mgLivros.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mgLivros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -509,30 +510,31 @@
             // ID
             // 
             this.ID.DataPropertyName = "Id";
+            this.ID.FillWeight = 37.38597F;
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
-            this.ID.Width = 25;
             // 
             // TITULO
             // 
             this.TITULO.DataPropertyName = "Titulo";
+            this.TITULO.FillWeight = 152.2843F;
             this.TITULO.HeaderText = "TITULO";
             this.TITULO.Name = "TITULO";
             this.TITULO.ReadOnly = true;
-            this.TITULO.Width = 175;
             // 
             // AUTOR
             // 
             this.AUTOR.DataPropertyName = "Autor";
+            this.AUTOR.FillWeight = 126.6901F;
             this.AUTOR.HeaderText = "AUTOR";
             this.AUTOR.Name = "AUTOR";
             this.AUTOR.ReadOnly = true;
-            this.AUTOR.Width = 125;
             // 
             // CATEGORIA
             // 
             this.CATEGORIA.DataPropertyName = "Categoria";
+            this.CATEGORIA.FillWeight = 107.5918F;
             this.CATEGORIA.HeaderText = "CATEGORIA";
             this.CATEGORIA.Name = "CATEGORIA";
             this.CATEGORIA.ReadOnly = true;
@@ -540,6 +542,7 @@
             // LANÇAMENTO
             // 
             this.LANÇAMENTO.DataPropertyName = "Lancamento";
+            this.LANÇAMENTO.FillWeight = 93.34091F;
             this.LANÇAMENTO.HeaderText = "LANÇAMENTO";
             this.LANÇAMENTO.Name = "LANÇAMENTO";
             this.LANÇAMENTO.ReadOnly = true;
@@ -547,10 +550,10 @@
             // EXEMPLARES
             // 
             this.EXEMPLARES.DataPropertyName = "Exemplares";
+            this.EXEMPLARES.FillWeight = 82.70695F;
             this.EXEMPLARES.HeaderText = "EXEMPLARES";
             this.EXEMPLARES.Name = "EXEMPLARES";
             this.EXEMPLARES.ReadOnly = true;
-            this.EXEMPLARES.Width = 75;
             // 
             // Livros
             // 
@@ -568,14 +571,14 @@
             this.Text = "Livros";
             this.Load += new System.EventHandler(this.Livros_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mgLivros)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
